@@ -5,16 +5,25 @@
 
 ## Setup
 
-### 0. pandocのインストール
-参考：(Pandocの比較的簡単なインストール方法)[https://qiita.com/sky_y/items/3c5c46ebd319490907e8]
+### 0. `pandoc` および `gh`のインストール
+- pandoc：[Pandocの比較的簡単なインストール方法](https://qiita.com/sky_y/items/3c5c46ebd319490907e8)
+- gh: [GitHub CLIで始める快適GitHub生活](https://qiita.com/ryo2132/items/2a29dd7b1627af064d7b)
 
-### 1. このリポジトリをFork
+### 1. このリポジトリをローカルにclone
 
-### 2. ローカルにclone
+### 2. `gh`でprivate repoの作成
+```bash
+cd docx-track-template/
+rm -r .git/
+gh repo create <YourGitHubAccount>/<new-repo-name> --private
+git init
+git add .
+git commit -m "init"
+git push --set-upstream origin main
+```
 
 ### 3. setup
 ```bash
-cd docx-track-template/
 bash setup.sh
 chmod +x ./command.sh
 ```
